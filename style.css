@@ -1,0 +1,473 @@
+/*
+Template Name: Barbara Nessim
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Muli',sans-serif;
+	font-size: 100%;
+	color:#333;
+	background-color: #eeeeee;
+}
+img {
+	border: none;
+}
+.inGallery {
+	display: none;
+}
+.iconFont {
+	font-family: 'Icons' !important;
+	font-weight: 400 !important;
+	font-size: normal !important;
+}
+.iconFont a {
+	text-decoration: none;
+	color:rgba(51,51,51,.7);
+}
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #333;
+	padding: 16px 0;
+	background-color: #fff;
+	z-index: 1000;
+	height: 49px;
+}
+	#header .headLeft {
+		left: 7.692308%;
+		width: 53.846156%;
+		position: relative;
+		float: left;
+		height: 100%;
+	}
+		#header .mastHead {
+			width: 100%;
+			height: auto;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto 0;
+			position: absolute;
+		}
+		#header .mastHead.red {
+			display: block;
+		}
+		#header .mastHead.white {
+			display: none;
+		}
+		#header .headLeft h1:hover, #header .headLeft h2:hover, #header .headLeft h2 a:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	#header .headRight {
+		float: right;
+		position: relative;
+		right: 0.9615385%;
+		width: 23.942308%;
+		height: 100%;
+	}
+		#header .headRight img {
+			width: 100%;
+			display: block;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto 0;
+			position: absolute;
+		}
+#landing {
+	background-color: #ed1b34;
+	height: 100%;
+	top: 0;
+	color: #fff;
+	width: 100%;
+	position: absolute;
+	z-index: 600;
+}
+	#landing a {
+		color:#fff;
+	}
+	#landing.hidden {
+		display: none;
+		position: fixed;
+	}
+	#landing .landingContent {
+		position: absolute;
+		margin: auto;
+		top: 82px;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding: 0 23.076924% 0 7.692308%;
+		height: 540px;
+		z-index: 25;
+		font-size: 1.25em;
+	}
+		#landing .landingContent p {
+			line-height: 1.25em;
+			padding:10px 0 14px 0;
+		}
+		#landing .browseBtn {
+			position: absolute;
+			text-align: left;
+			cursor: pointer;
+			margin: 24px 0 0 0;
+			left: 7.692308%;
+			z-index: 20;
+			padding: 20px;
+			font-size: .75em;
+			text-transform: uppercase;
+			border: 3px solid #fff;
+			letter-spacing: 0.1em;
+		}
+		#landing .browseBtnBdr {
+			position: absolute;
+			right: calc(49.692308% + 63px);
+			top: 0;
+			border-right: 3px dotted #fff;
+			/* height: 100%; */
+			bottom: 13%;
+		}
+.toTheLanding {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	z-index: 900;
+	background-color: #ed1b34;
+	border-top: 1px solid #333;
+	padding:10px 0;
+	display: none;
+}
+	.toTheLandingWrapper {
+		margin-left: 7.692308%;
+		width: 84.615384%;
+	}
+	.toTheLanding h2 {
+			font-size: .75em;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			font-weight: normal;
+			line-height: 1em;
+			cursor: pointer;
+			color: #fff;
+			text-decoration: none;
+		}
+#gallery {
+	background-color: #eeeeee;
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	top: -100%;
+	position: absolute;
+	display: none;
+	z-index: 500;
+	padding-bottom: 33px;
+}
+	.galleryWrapper {
+		width: 100%;
+	}
+	.singleItem {
+		width: 15.384615%;
+		padding-top:10px;
+		padding-right: 7.692308%;
+		padding-bottom: 15px;
+		float: left;
+		text-align: center;
+		border-bottom: 1px solid #cfcfcf;
+		font-size: 0.8125em;
+	}
+	.singleItem:nth-child(4n+1) {
+		padding-left: 7.692308%;
+	}
+		.singleItem .itemImage {
+			position: relative;
+		}
+		.singleItem img {
+			width: 100%;
+			height: auto;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.singleItem .itemTitle {
+			padding-top: 20px;
+		}
+#single {
+	background-color: #eeeeee;
+	width: 100%;
+	top: 82px;
+	height: calc(100% - 115px);
+	position: absolute;
+	z-index: 950;
+	overflow-x:hidden;
+}
+	.singleWrapper {
+		width: 100%;
+		height: 100%;
+		position: static;
+	}
+	.singleWrapper.new {
+		position: absolute;
+		top: 0;
+		left: 100%
+	}
+	.singleWrapper.old {
+		position: absolute;
+		top: 0;
+		left: -100%
+	}
+	#single .detailsWrapper {
+		position: absolute;
+		bottom: 0;
+		right: 7.692308%;
+		width: 23.076923%;
+		z-index: 500;
+	}
+		#single .theDetails {
+			background-color: rgba(196,196,196,.75);
+			padding: 18px 8.333333% 18px;
+		}
+		#single .detailsWrapper h1 {
+			font-size: 1.125em;
+			font-weight: normal;
+			padding-bottom: 10px;
+		}
+		#single .detailsWrapper p {
+			font-size: 0.8125em;
+			padding-bottom: 18px;
+		}
+	#single .prevPost {
+		position: absolute;
+		right:1.923077%;
+		bottom: 50%;
+		height: 35px;
+		width: 35px;
+	}
+		.nextPost a, .prevPost a {
+			display: block;
+			height: 35px;
+			font-size:2.1em;
+		}
+		.prevPost a {
+		}
+		.nextPost a {
+		}
+	#single .nextPost {
+		position: absolute;
+		left:1.923077%;
+		bottom: 50%;
+		height: 35px;
+		width: 35px;
+	}
+	#single .closePost {
+		position: absolute;
+		right:2.692308%;
+		top:30px;
+		width: 23px;
+		height: 23px;
+		display: block;
+		cursor: pointer;
+		font-size: 1.4em;
+		color: rgba(51,51,51,.7);
+	}
+	#single .theImage {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		overflow: hidden;
+	}
+		#single .theImage .myContainer {
+			max-height: 100%;
+			height: 100%;
+			max-width: 100%;
+			width: auto;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			position: relative;
+			margin: auto 0;
+		}
+		#single .theImage #myContainer-new {
+			max-height: 100%;
+			height: auto;
+			max-width: 100%;
+			width: auto;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			position: absolute;
+			margin: auto 0;
+			z-index: 200;
+		}
+	#single .controlWrapper {
+		background-color: rgba(66,66,66,.75);
+		height: 40px;
+	}
+		.controlWrapper .magIcon {
+			height: 22px;
+			width: 22px;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			font-size: 1.24em;
+			color: rgba(255,255,255,.4);
+		}
+		.controlWrapper .zoomIn {
+			height: 15px;
+			width: 25px;
+			padding: 0;
+			margin: 0;
+			border:none;
+			background-color: transparent;
+			position: absolute !important;
+			top: 13px;
+			left: 40px;
+			cursor: pointer;
+			font-size: .85em;
+			color: rgba(255,255,255,1);
+		}
+		.controlWrapper .zoomOut {
+			height: 15px;
+			width: 25px;
+			padding: 0;
+			margin: 0;
+			border:none;
+			background-color: transparent;
+			position: absolute !important;
+			top: 13px;
+			left: 80px;
+			cursor: pointer;
+			font-size: .85em;
+			color: rgba(255,255,255,1);
+		}
+		.controlWrapper .mini {
+			width: 22px;
+			position: absolute;
+			top: 11px;
+			right: 9px;
+			cursor: pointer;
+			font-size: 1.2em;
+			color: #fff;
+		}
+		#audioControl {
+			width: 27px;
+			height: 30px;
+			cursor: pointer;
+			float: left;
+			font-size: 1.3em;
+			text-align: left;
+			line-height: 1.5em;
+			color: #fff;
+			background-color: #6d6d6d;
+			padding: 1px 0px 1px 5px;
+		}
+			#audioControl.play {
+			}
+			#audioControl.play.pause {
+			}
+		.timer {
+			float: left;
+			padding-left: 10px;
+			padding-top:7px;
+			font-size: .8125em;
+		}
+			.timer div {
+				float:left;
+				padding-right: 4px;
+			}
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	background: rgba(237,27,52,.8);
+	z-index: 1000;
+	text-align: center;
+	padding: 30px 40px;
+	color: #fff;
+	border: 3px solid #fff;
+	width: 80px;
+	height: 95px;
+	display: none;
+}
+	#loading .iconFont {
+		font-size:4em;
+		line-height: 1;
+		width: 64px;
+		height: 62px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		padding:0;
+		text-align: center;
+		display: inline-block;
+	}
+
+@media screen and ( max-width: 500px ){
+	#header .headLeft {
+		width: 84.615384%;
+		height: 50%;
+	}
+		#header .mastHead {
+			margin: 0;
+		}
+	#header .headRight {
+		float: none;
+		position: relative;
+		right: 0;
+		width: 60%;
+		height: 50%;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		top: 60%;
+	}
+	#landing {
+		background-color: #ed1b34;
+		height: 100%;
+		min-height: 100%;
+		margin: 0;
+		top: 0;
+		color: #fff;
+		width: 100%;
+		position: absolute;
+		z-index: 600;
+	}
+	#landing .landingContent {
+		position: absolute;
+		margin: 0;
+		top: 102px;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding: 0 7.692308%;
+		height: auto;
+		min-height: 100%;
+		z-index: 25;
+		background-color: #ed1b34;
+		font-size: 1em;
+	}
+	.singleItem {
+		padding: 30px 7.692308% 30px;
+		width: 84.615384%
+	}
+	.detailsWrapper {
+		right: 0 !important;
+		width: 100% !important;
+	}

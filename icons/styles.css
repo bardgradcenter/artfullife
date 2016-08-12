@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/barbara-nessim-icon-font.eot');
+    src: url('./fonts/barbara-nessim-icon-font.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/barbara-nessim-icon-font.woff') format('woff'),
+         url('./fonts/barbara-nessim-icon-font.ttf') format('truetype'),
+         url('./fonts/barbara-nessim-icon-font.svg#Icons') format('svg');
+}

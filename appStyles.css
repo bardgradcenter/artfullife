@@ -1,0 +1,6 @@
+.inGallery {
+	display: inline !important;
+}
+.nonGallery {
+	display: none !important;
+}
